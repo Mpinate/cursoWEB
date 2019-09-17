@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo de jquery</title>
+    <script src="./jquery/jquery-3.4.1.min.js"></script>
+    <script text="txt/js">
+        $(document).ready(function() {
+            // $("#desaparecer").click(function() {
+            $("P").click(function() {
+                $(this).css("background", MiColor);
+                // $(this).hide();
+            });
+        });
+
+
+        MiColor = '#fff';
+
+
+        function sel_color(colorclick) {
+            MiColor = colorclick;
+            NombreColor = '';
+
+            if (MiColor == '#00f') {
+                NombreColor = 'Azul';
+            } else if (MiColor == '#f00') {
+                NombreColor = 'Rojo';
+            } else {
+                NombreColor = 'Verde';
+            }
+            alert("Eligió el color: " + NombreColor);
+        }
+    </script>
+
+
+</head>
+
+<body>
+
+    <table>
+        <tr>
+            <td style="color: blue; background-color: lightblue;" onclick="sel_color('#00f');">Color azul</td>
+        </tr>
+        <tr>
+            <td style="color: red; background-color: pink;" onclick="sel_color('#f00');">Color rojo</td>
+        </tr>
+        <tr>
+            <td style="color: green; background-color: lightgreen;" onclick="sel_color('#0f0');">Color verde</td>
+        </tr>
+
+
+    </table>
+
+
+
+    <h2> Eliminemos los pàrrafos</h2>
+    <p style="width: 200px; border: 1px solid blue">Click me away</p>
+    <p style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <p style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <h1>titulo 1</h1>
+    <p style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <p style="width: 200px; border: 1px solid blue">Click me away</p>
+    <p style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <p style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <h1>titulo 1</h1>
+    <p>Click me too!</p>
+
+
+    <button id="desaparecer">Click aqui</button>
+
+</body>
+
+</html>

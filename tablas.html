@@ -1,0 +1,86 @@
+<html>
+
+<head>
+    <title> Diseño de tablas </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="./css/tablas.css">
+    <!--meta http-equiv="refresh" content="5"-->
+</head>
+
+<body>
+    <table>
+        <caption align="top"></caption>
+        <tr>
+            <th> I </th>
+            <th> II </th>
+            <th> III </th>
+            <th> IV </th>
+            <th> IV </th>
+        </tr>
+        <tr>
+            <td>
+                <img src="./img/painting-palette.png" style="width: 50px" alt="http:google.com" />
+            </td>
+            <td>Contenido 1-2</td>
+            <td>
+                <p>Aqui colocaremos mas contenido, a ver que pasa</p>
+            </td>
+            <td>Contenido 1-4</td>
+            <td>Contenido 1-5</td>
+        </tr>
+        <tr>
+            <td> Contenido 2-1</td>
+            <td>Contenido 2-2</td>
+            <td>Contenido 2-3</td>
+            <td rowspan="2" colspan="2">
+                <img src="./img/notepass.png">
+            </td>
+            <!-- <td>Contenido 2-5</td> -->
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center" valign="top">Contenido 3-1 y 3-2</td>
+            <!-- <td>Contenido 3-2</td> -->
+            <td>Contenido 3-3</td>
+            <!-- <td>Contenido 3-4</td>  -->
+            <!-- <td>Contenido 3-5</td> -->
+        </tr>
+        <tr>
+            <td rowspan="2" colspan="3" style="text-align: center" valign="top">
+                <!--Tabla anidada-->
+                <table class="mi-table">
+                    <tr>
+                        <th>Dia</th>
+                        <th>Mes</th>
+                        <th>Año</th>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Jul</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Ago</td>
+                        <td>2019</td>
+                    </tr>
+                </table>
+
+            </td>
+            <!-- <td>Contenido 3-2</td> -->
+            <td>Contenido 3-3</td>
+            <td>Contenido 3-4</td>
+            <!-- <td>Contenido 3-5</td> -->
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center" valign="top">Contenido 3-1 y 3-2</td>
+            <!-- <td>Contenido 3-2</td> -->
+            <!-- <td>Contenido 3-3</td>
+            <td>Contenido 3-4</td>
+            <td>Contenido 3-5</td> -->
+        </tr>
+    </table>
+
+</body>
+
+</html>

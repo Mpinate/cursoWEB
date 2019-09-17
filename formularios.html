@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Practica de Formularios</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/formularios.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet"> -->
+    <script type="text/javascript">
+        function prueba() {
+            var nombre = document.getElementById("nombre").value;
+            /*    alert(nombre + " Genial, aprendiendo cosas nuevas");
+                document.getElementById("nombre").value = " "; */
+            if (nombre == "pepe") {
+                alert("Pepé !NO!.... José")
+                document.getElementById("nombre").value = "José";
+            } else {
+                document.getElementById("nombre").value = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="caja_div">
+        <!-- style="border: 2px solid blue; text-align: center; align-content: center;
+        width: 50%;"-->
+        <h1> FORMULARIOS </h1>
+        <form method="POST" action="datos.php" enctype="multipart/form-data">
+            <table>
+
+                <!--Cuadro de texto y contraseña-->
+                <tr>
+                    <td> Nombre:</td>
+                    <td>
+                        <input type="text" id="nombre" name="nombre" size="25" maxlength="20" placeholder="Ingrese su nombre" />
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td> Apellido:</td>
+                        <td>
+                            <input type="text" id="apellido" name="apellido" size="25" maxlength="20" placeholder="Ingrese su apellido" />
+                        </td>
+                    </tr>
+
+                    <!--Cuadro número de hijos-->
+                    <tr>
+                        <td> Numero de hijos:</td>
+                        <td>
+                            <input type="number" id="hijos" name="n_hijos" size="2" placeholder="Ingrese número de hijos" />
+                        </td>
+                    </tr>
+
+
+                    <tr>
+                        <td>Clave:</td>
+                        <td>
+                            <input type="password" id="clave" name="clave" size="12" maxlength="10" placeholder="Contraseña" />
+                            <textarea name="comentario" rows="5" cols="15">Escriba aqui</textarea>
+                        </td>
+                    </tr>
+
+                    <!--Casilla de verificaciòn-->
+                    <tr>
+                        <td>Documentos: </td>
+                        <td>
+                            <input name="dni" type="checkbox" value="dni" checked/> DNI
+                            <input name="nie" type="checkbox" value="nie" /> NIE
+                            <input name="pass" type="checkbox" value="pass" /> Pasaporte
+                        </td>
+                    </tr>
+
+                    <!--Opciòn de radio-->
+                    <tr>
+                        <td>Sexo: </td>
+                        <td>
+                            <input name="sexo" type="radio" value="H" /> Hombre
+                            <input name="sexo" type="radio" value="M" /> Mujer
+                        </td>
+                    </tr>
+
+                    <!--Subir un fichero-->
+                    <tr>
+                        <td>Foto Carnet: </td>
+                        <td>
+                            <input type="file" name="foto" value="Fichero" />
+                        </td>
+                    </tr>
+
+                    <!--Cuadro de Seleccion-->
+                    <!--Si incluyes el valor size y multiple, se coloca como una lista-->
+                    <tr>
+                        <td>Seleccione: </td>
+                        <td>
+                            <select name="viaje" size="4" multiple> 
+                        <option value="1">Tren</option> 
+                        <option value="2">Barco</option> 
+                        <option value="3">Avion</option> 
+                        <option value="4">Globo</option> 
+                        <option value="5">Caballo</option> 
+                        <option value="6">Bus</option> 
+                        <option value="7">Bicicleta</option> 
+                    </select>
+                        </td>
+                    </tr>
+
+                    <!--Botones-->
+                    <tr style="text-align: center">
+                        <td class="tdespecial" colspan="2">
+                            <input type="submit" value="Enviar" class="boton" />
+                            <input type="button" value="Limpiar" class="boton" onclick="prueba();" />
+                        </td>
+                    </tr>
+            </table>
+        </form>
+    </div>
+
+    <a class="letra_verde">Link en verde</a>
+    <p class="letra_verde"> Parrafo no se vera en verde. Selector inválido</p>
+
+    <footer>
+        <div id="footer_div">
+            <p id="parrafo_div" </p>>Acerca de:</p>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>

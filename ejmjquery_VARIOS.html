@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo de jquery</title>
+    <script src="./jquery/jquery-3.4.1.min.js"></script>
+    <script text="txt/js">
+        //cambiar color del body con dos funciones
+        // $(document).ready(function() {
+        //     $("button").click(function() {
+        //         $("body").css("background-color", "#fabada");
+        //     })
+        // });
+
+        // $(document).ready(function() {
+        //     $("button").dblclick(function() {
+        //         $("body").css("background-color", "#0ff");
+        //     })
+        // });
+
+
+        //cambiar color del body con una sola funcion
+        $(document).ready(function() {
+            $("button").on({
+                click: function() {
+                    $("body").css("background-color", "#fabada");
+                },
+                dblclick: function() {
+                    $("body").css("background-color", "#0ff");
+                }
+            })
+        })
+
+        //funcion asociada a los parrafos de la pagina
+        $(document).ready(function() {
+            // $("#desaparecer").click(function() {
+            $("P").hover(function() {
+                    $(this).css("background-color", "blue");
+                    //$(this).hide();
+                },
+                function() {
+                    $(this).css("color", "white");
+                });
+        });
+
+        //funcion para cambiar mayuscula con javascript
+        // function camb_mayuscula() {
+        //     var texto = prompt("Introduzca lo que quiera");
+        //     alert(texto.toUpperCase());
+        // }
+
+
+        //funcion para cambiar mayuscula con jquery
+        $(document).ready(function() {
+            $("#mayuscula").click(function() {
+                var texto = prompt("Introduzca lo que quiera");
+                alert(texto.toUpperCase());
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+
+    <h2> Eliminemos los pàrrafos</h2>
+    <p id="parrafo1" style="width: 200px; border: 1px solid blue">Click me away</p>
+    <p class="clas_parrafo" style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <p class="clas_parrafo" style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <h1>titulo 1</h1>
+    <p class="clas_parrafo" style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <p class="clas_parrafo" style="width: 200px; border: 1px solid blue">Click me away</p>
+    <p style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <p style="width: 200px; border: 1px solid blue">Click me too!</p>
+    <h1>titulo 1</h1>
+    <button id="mayuscula" value="Demo para cambiar a mayuscula" onclick="camb_mayuscula()">Cambio a Mayúscula</button>
+
+
+    <button id="desaparecer">Click aqui</button>
+
+</body>
+
+</html>

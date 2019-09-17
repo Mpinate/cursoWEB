@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <link rel='stylesheet' href='./css/formularios.css'>
+    <script>
+        function numero(tecla) {
+            if (tecla == "=") {
+                document.getElementById("formulario").submit();
+
+            } else {
+                //alert("pulsaste el" + tecla);
+                document.getElementById("valor").value =
+                    document.getElementById("valor").value + tecla;
+            }
+        }
+
+        function Limpiar() {
+
+            // var limpiar = document.getElementById("valor").value;
+            document.getElementById("valor").value = "";
+            document.getElementById("resultadofinal").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+    <!--aqui el formulario-->
+    <form method='POST' action='factorial4.php' id="formulario">
+        <table>
+            <tr>
+                <td>Introduzca un número</td>
+                <td> <input type='text' id='valor' name='valor' value="<?php $numero ?>" readonly></td>
+            </tr>
+            <tr>
+                <td colspan='2' style='text-align: center;'>
+                    <input type='submit'>
+                    <!-- <input type="reset" value="Limpiar"> -->
+                    <input type="button" value="Limpiar" onclick="Limpiar();">
+                </td>
+            </tr>
+        </table>
+    </form>
+    <p>&nbsp</p>
+    <table>
+        <tr>
+            <td>El factorial es:</td>
+            <!-- resultado del cálculo -->
+            <td id="resultadofinal">
+                <?php echo $resultado; ?>
+            </td>
+        </tr>
+    </table>
+    <p>&nbsp</p>
+    <table class="teclado" ; "width:150px; border:1px solid blue; text-align: center; padding: 3px;margin: 0 auto">
+        <tr>
+            <td onclick="numero('7');">7</td>
+            <td onclick="numero('8');">8</td>
+            <td onclick="numero('9');">9</td>
+            <td rowspan="4" onclick="numero('=');">=</td>
+        </tr>
+        <tr>
+            <td onclick="numero('4');">4</td>
+            <td onclick="numero('5');">5</td>
+            <td onclick="numero('6');">6</td>
+            <tr>
+                <td onclick="numero('1');">1</td>
+                <td onclick="numero('2');">2</td>
+                <td onclick="numero('3');">3</td>
+            </tr>
+            <tr>
+                <td colspan="2" onclick="numero('0');">0</td>
+                <td>.</td>
+            </tr>
+    </table>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!--para que sea responsive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Programa con Javascript y php</title>
+
+    <script type="text/JavaScript">
+
+        var fontSize =1; function version2(condicion) { if (condicion == 0) { fontSize --; } else if (condicion == 1) { fontSize ++; } else { alert("Escribe bien, es 0, 1, 2"); } document.getElementById("parrafo1").style.fontSize = fontSize + "em"; }
+
+    </script>
+</head>
+
+<body>
+
+    <p id="parrafo1">Ejemplo de parrafo 1</p>
+    <input type="button" value="Aumentar" id="aumentar" onclick="version2(1)">
+    <input type="button" value="Disminuir" id="disminuir" onclick="version2(0)">
+    <input type="button" value="Otro" id="otro" onclick="version2()">
+
+</body>
+
+</html>

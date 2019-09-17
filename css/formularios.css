@@ -1,0 +1,97 @@
+body {
+    /* background-coloR: lightseagreen; */
+}
+
+
+/* centrar un formulario */
+
+.caja_div {
+    border: 2px solid lightcoral;
+    margin: auto;
+    width: 40%;
+    padding: 10px;
+    border-radius: 5px;
+    border-right-width: 20px;
+    border-bottom-width: 20px;
+}
+
+h1 {
+    /* font-family: 'Dancing Script', cursive; */
+    text-align: center;
+    font-size: 35px;
+}
+
+table {
+    border: 2px solid blue;
+    border-color: black;
+    border-radius: 15px;
+    border-collapse: separate;
+    border-spacing: 8px 10px;
+    /* border-spacing: 10px; */
+    /* background-color: lightseagreen; */
+}
+
+td {
+    text-align: left;
+    font-size: 15px;
+    padding: 15px;
+    background-color: rgb(141, 193, 209);
+}
+
+.teclado {
+    background: lightgoldenrodyellow;
+}
+
+.teclado td {
+    cursor: pointer;
+}
+
+.boton {
+    color: blue;
+    background: lightblue;
+    font-size: 20px;
+}
+
+.tdespecial {
+    text-align: center;
+}
+
+a.letra_verde {
+    color: green;
+}
+
+footer {
+    background-color: aqua;
+    width: 1000px;
+    height: 100px;
+    /* float: right; */
+    margin: auto;
+}
+
+#nombre {
+    color: forestgreen;
+}
+
+
+/* p:hover {
+    text-decoration: none;
+} */
+
+#nombre:focus,
+#apellido:focus,
+#clave:focus {
+    color: white;
+    background: black;
+}
+
+#footer_div {
+    background-color: lightseagreen;
+    width: 800px;
+    height: 90px;
+    margin: auto;
+    padding: 40px 30px 40px 50px;
+}
+
+#parrafo_div {
+    border: 1px solid black;
+}
